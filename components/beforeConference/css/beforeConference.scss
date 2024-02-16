@@ -1,0 +1,222 @@
+.main {
+  min-width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: space-between;
+
+  header {
+    overflow: hidden;
+    margin-top: 60px;
+    margin-left: 70px;
+  }
+
+  .hero {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    position: relative;
+
+    &__image-section {
+      min-width: 0;
+      .illustration {
+        max-width: 700px;
+        min-width: 0;
+        height: auto;
+      }
+    }
+
+    &__content {
+      flex: 1 0 auto;
+      overflow: hidden;
+      padding: 0 20px;
+
+      .main-text {
+        font-family: "SpareBank 1";
+        font-size: 34px;
+        line-height: 50px;
+        text-wrap: balance;
+
+        .smudtech {
+          font-weight: bolder;
+        }
+      }
+
+      .hold-av-dato {
+        margin-top: 56px;
+        width: max-content;
+        padding: 0.5rem 1.2rem;
+        border-radius: 0.5rem;
+        background-color: #fadde1;
+        font-family: "SpareBank 1";
+      }
+    }
+
+    .wave-background {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      z-index: -1;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .main {
+    header {
+    }
+
+    .hero {
+      &__image-section {
+        .illustration {
+          max-width: 65%;
+        }
+      }
+
+      &__content {
+        position: fixed;
+        top: 20%;
+        right: 40px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .main {
+    .hero {
+      &__content {
+        top: 20%;
+        h1 {
+          font-size: 34px;
+        }
+
+        .main-text {
+          font-size: 24px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .main {
+    min-height: 100vh;
+    overflow: auto;
+    gap: 0;
+    header {
+      overflow: visible;
+      margin-top: 20px;
+      margin-left: 30px;
+
+      img {
+        width: 200px;
+        height: auto;
+      }
+    }
+
+    .hero {
+      flex-direction: column-reverse;
+      &__image-section {
+        overflow: hidden;
+        .illustration {
+          max-width: 60%;
+          margin-bottom: -50px;
+        }
+      }
+
+      &__content {
+        position: initial;
+        text-align: center;
+        h1 {
+          font-size: 50px;
+          line-height: 50px;
+          margin-bottom: 32px;
+        }
+        .main-text {
+          font-size: 24px;
+          line-height: 30px;
+        }
+
+        .hold-av-dato {
+          margin: 0 auto;
+          margin-top: 32px;
+          margin-bottom: 64px;
+        }
+      }
+
+      .wave-background {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .main {
+    header {
+      margin-top: 1rem;
+      margin-left: 2rem;
+    }
+
+    .hero {
+      .illustration {
+        min-width: 101%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .main {
+    gap: 32px;
+    justify-content: flex-start;
+    height: 100vh;
+    overflow: hidden;
+    header {
+      width: 200px;
+      margin-top: 20px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .hero {
+      height: 100%;
+      justify-content: space-between;
+      &__content {
+        h1 {
+          font-size: 40px;
+          margin-bottom: 0;
+        }
+
+        .main-text {
+          font-size: 1rem;
+          margin: 20px 0 40px;
+        }
+
+        .hold-av-dato {
+          padding: 0.5rem 1rem;
+          font-size: 0.8rem;
+          margin-bottom: 0;
+        }
+      }
+
+      .illustration {
+        margin-bottom: -20px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .main {
+    .hero {
+      &__content {
+        text-align: left;
+      }
+    }
+  }
+}
